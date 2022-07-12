@@ -1,976 +1,214 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220708 09:59:02.942" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220712 09:25:43.681" rpa="false" schemaversion="2">
 <suite id="s1" name="Create-Product" source="D:\20220707-RBF-Test\create-product.robot">
 <kw name="Login Merchant Center" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220708 09:59:03.081" level="INFO">Opening browser 'chrome' to base url 'http://mcf-qa-merchant-center.herokuapp.com'.</msg>
-<status status="PASS" starttime="20220708 09:59:03.080" endtime="20220708 09:59:05.730"/>
+<msg timestamp="20220712 09:25:43.825" level="INFO">Opening browser 'chrome' to base url 'http://mcf-qa-merchant-center.herokuapp.com'.</msg>
+<status status="PASS" starttime="20220712 09:25:43.825" endtime="20220712 09:25:46.418"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220708 09:59:05.730" endtime="20220708 09:59:05.854"/>
+<status status="PASS" starttime="20220712 09:25:46.418" endtime="20220712 09:25:46.540"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>0.3</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20220708 09:59:05.854" endtime="20220708 09:59:05.855"/>
+<status status="PASS" starttime="20220712 09:25:46.540" endtime="20220712 09:25:46.541"/>
 </kw>
 <kw name="Location Should Be" library="SeleniumLibrary">
 <arg>${url}/users/sign_in</arg>
 <doc>Verifies that the current URL is exactly ``url``.</doc>
-<msg timestamp="20220708 09:59:06.164" level="INFO">Current location is 'http://mcf-qa-merchant-center.herokuapp.com/users/sign_in'.</msg>
-<status status="PASS" starttime="20220708 09:59:05.855" endtime="20220708 09:59:06.164"/>
+<msg timestamp="20220712 09:25:46.851" level="INFO">Current location is 'http://mcf-qa-merchant-center.herokuapp.com/users/sign_in'.</msg>
+<status status="PASS" starttime="20220712 09:25:46.541" endtime="20220712 09:25:46.851"/>
 </kw>
 <kw name="Select Checkbox" library="SeleniumLibrary">
 <arg>id=user_remember_me</arg>
 <doc>Selects the checkbox identified by ``locator``.</doc>
-<msg timestamp="20220708 09:59:06.165" level="INFO">Selecting checkbox 'id=user_remember_me'.</msg>
-<status status="PASS" starttime="20220708 09:59:06.164" endtime="20220708 09:59:07.774"/>
+<msg timestamp="20220712 09:25:46.852" level="INFO">Selecting checkbox 'id=user_remember_me'.</msg>
+<status status="PASS" starttime="20220712 09:25:46.851" endtime="20220712 09:25:48.478"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id=user_email</arg>
 <arg>${email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220708 09:59:07.775" level="INFO">Typing text 'devrec-manao@mycloudfulfillment.com' into text field 'id=user_email'.</msg>
-<status status="PASS" starttime="20220708 09:59:07.774" endtime="20220708 09:59:08.773"/>
+<msg timestamp="20220712 09:25:48.478" level="INFO">Typing text 'devrec-manao@mycloudfulfillment.com' into text field 'id=user_email'.</msg>
+<status status="PASS" starttime="20220712 09:25:48.478" endtime="20220712 09:25:49.468"/>
 </kw>
 <kw name="Input Password" library="SeleniumLibrary">
 <arg>id=user_password</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20220708 09:59:08.773" level="INFO">Typing password into text field 'id=user_password'.</msg>
-<msg timestamp="20220708 09:59:09.419" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20220708 09:59:09.746" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20220708 09:59:08.773" endtime="20220708 09:59:09.746"/>
+<msg timestamp="20220712 09:25:49.468" level="INFO">Typing password into text field 'id=user_password'.</msg>
+<msg timestamp="20220712 09:25:50.108" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220712 09:25:50.447" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220712 09:25:49.468" endtime="20220712 09:25:50.447"/>
 </kw>
 <kw name="Unselect Checkbox" library="SeleniumLibrary">
 <arg>id=user_remember_me</arg>
 <doc>Removes the selection of checkbox identified by ``locator``.</doc>
-<msg timestamp="20220708 09:59:09.746" level="INFO">Unselecting checkbox 'id=user_remember_me'.</msg>
-<status status="PASS" starttime="20220708 09:59:09.746" endtime="20220708 09:59:11.317"/>
+<msg timestamp="20220712 09:25:50.448" level="INFO">Unselecting checkbox 'id=user_remember_me'.</msg>
+<status status="PASS" starttime="20220712 09:25:50.447" endtime="20220712 09:25:52.067"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>name=commit</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220708 09:59:11.317" level="INFO">Clicking button 'name=commit'.</msg>
-<status status="PASS" starttime="20220708 09:59:11.317" endtime="20220708 09:59:13.206"/>
+<msg timestamp="20220712 09:25:52.068" level="INFO">Clicking button 'name=commit'.</msg>
+<status status="PASS" starttime="20220712 09:25:52.067" endtime="20220712 09:25:53.919"/>
 </kw>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>//h2[contains(text(),'Welcome to Merchant Center - QA Assignment')]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220708 09:59:13.842" level="INFO">Element '//h2[contains(text(),'Welcome to Merchant Center - QA Assignment')]' is displayed.</msg>
-<status status="PASS" starttime="20220708 09:59:13.206" endtime="20220708 09:59:13.842"/>
+<msg timestamp="20220712 09:25:54.554" level="INFO">Element '//h2[contains(text(),'Welcome to Merchant Center - QA Assignment')]' is displayed.</msg>
+<status status="PASS" starttime="20220712 09:25:53.919" endtime="20220712 09:25:54.554"/>
 </kw>
-<status status="PASS" starttime="20220708 09:59:03.080" endtime="20220708 09:59:13.842"/>
+<status status="PASS" starttime="20220712 09:25:43.825" endtime="20220712 09:25:54.554"/>
 </kw>
-<test id="s1-t1" name="Create New Product without Product Name">
+<test id="s1-t1" name="CreateNewProductwithoutProductImage">
 <kw name="Go To" library="SeleniumLibrary" type="SETUP">
 <arg>${createProduct}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220708 09:59:13.845" level="INFO">Opening url 'http://mcf-qa-merchant-center.herokuapp.com/products/new'</msg>
-<status status="PASS" starttime="20220708 09:59:13.845" endtime="20220708 09:59:14.522"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=category</arg>
-<arg>${category}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220708 09:59:14.524" level="INFO">Typing text 'Cloth' into text field 'id=category'.</msg>
-<status status="PASS" starttime="20220708 09:59:14.523" endtime="20220708 09:59:15.528"/>
-</kw>
-<kw name="Choose File" library="SeleniumLibrary">
-<arg>id=image_blob</arg>
-<arg>${imagePNG32px}</arg>
-<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
-<msg timestamp="20220708 09:59:15.530" level="INFO">Sending D:\20220707-RBF-Test\Image\green_shirt_32_png.png to browser.</msg>
-<status status="PASS" starttime="20220708 09:59:15.530" endtime="20220708 09:59:16.199"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>name=commit</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220708 09:59:16.200" level="INFO">Clicking button 'name=commit'.</msg>
-<status status="PASS" starttime="20220708 09:59:16.200" endtime="20220708 09:59:17.488"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>//div[contains(text(),"Name can't be blank")]</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220708 09:59:18.140" level="INFO">Element '//div[contains(text(),"Name can't be blank")]' is displayed.</msg>
-<status status="PASS" starttime="20220708 09:59:17.489" endtime="20220708 09:59:18.140"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>//div[contains(text(),'Name is too short (minimum is 3 characters)')]</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220708 09:59:18.772" level="INFO">Element '//div[contains(text(),'Name is too short (minimum is 3 characters)')]' is displayed.</msg>
-<status status="PASS" starttime="20220708 09:59:18.140" endtime="20220708 09:59:18.772"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>//div[contains(text(),'Name is invalid')]</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220708 09:59:19.423" level="INFO">Element '//div[contains(text(),'Name is invalid')]' is displayed.</msg>
-<status status="PASS" starttime="20220708 09:59:18.773" endtime="20220708 09:59:19.423"/>
-</kw>
-<status status="PASS" starttime="20220708 09:59:13.843" endtime="20220708 09:59:19.424"/>
-</test>
-<test id="s1-t2" name="Create New Product with only Product Name">
-<kw name="Go To" library="SeleniumLibrary" type="SETUP">
-<arg>${createProduct}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220708 09:59:19.429" level="INFO">Opening url 'http://mcf-qa-merchant-center.herokuapp.com/products/new'</msg>
-<status status="PASS" starttime="20220708 09:59:19.429" endtime="20220708 09:59:20.056"/>
+<msg timestamp="20220712 09:25:54.554" level="INFO">Opening url 'http://mcf-qa-merchant-center.herokuapp.com/products/new'</msg>
+<status status="PASS" starttime="20220712 09:25:54.554" endtime="20220712 09:25:55.172"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id=name</arg>
 <arg>${name}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220708 09:59:20.058" level="INFO">Typing text 'Green Shirt' into text field 'id=name'.</msg>
-<status status="PASS" starttime="20220708 09:59:20.057" endtime="20220708 09:59:21.061"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>name=commit</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220708 09:59:21.063" level="INFO">Clicking button 'name=commit'.</msg>
-<status status="PASS" starttime="20220708 09:59:21.062" endtime="20220708 09:59:22.036"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>//div[@id='category_error']</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220708 09:59:22.685" level="INFO">Element '//div[@id='category_error']' is displayed.</msg>
-<status status="PASS" starttime="20220708 09:59:22.037" endtime="20220708 09:59:22.685"/>
-</kw>
-<status status="PASS" starttime="20220708 09:59:19.427" endtime="20220708 09:59:22.686"/>
-</test>
-<test id="s1-t3" name="Create New Product with space in Product Name">
-<kw name="Go To" library="SeleniumLibrary" type="SETUP">
-<arg>${createProduct}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220708 09:59:22.691" level="INFO">Opening url 'http://mcf-qa-merchant-center.herokuapp.com/products/new'</msg>
-<status status="PASS" starttime="20220708 09:59:22.691" endtime="20220708 09:59:23.316"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=name</arg>
-<arg>${SPACE}${name}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220708 09:59:23.318" level="INFO">Typing text ' Green Shirt' into text field 'id=name'.</msg>
-<status status="PASS" starttime="20220708 09:59:23.317" endtime="20220708 09:59:24.323"/>
+<msg timestamp="20220712 09:25:55.174" level="INFO">Typing text 'Blue Shirt' into text field 'id=name'.</msg>
+<status status="PASS" starttime="20220712 09:25:55.173" endtime="20220712 09:25:56.179"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id=category</arg>
 <arg>${category}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220708 09:59:24.325" level="INFO">Typing text 'Cloth' into text field 'id=category'.</msg>
-<status status="PASS" starttime="20220708 09:59:24.324" endtime="20220708 09:59:25.330"/>
-</kw>
-<kw name="Choose File" library="SeleniumLibrary">
-<arg>id=image_blob</arg>
-<arg>${imagePNG32px}</arg>
-<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
-<msg timestamp="20220708 09:59:25.332" level="INFO">Sending D:\20220707-RBF-Test\Image\green_shirt_32_png.png to browser.</msg>
-<status status="PASS" starttime="20220708 09:59:25.331" endtime="20220708 09:59:25.966"/>
+<msg timestamp="20220712 09:25:56.180" level="INFO">Typing text 'Cloth' into text field 'id=category'.</msg>
+<status status="PASS" starttime="20220712 09:25:56.179" endtime="20220712 09:25:57.185"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>name=commit</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220708 09:59:25.968" level="INFO">Clicking button 'name=commit'.</msg>
-<status status="PASS" starttime="20220708 09:59:25.967" endtime="20220708 09:59:27.279"/>
+<msg timestamp="20220712 09:25:57.187" level="INFO">Clicking button 'name=commit'.</msg>
+<status status="PASS" starttime="20220712 09:25:57.186" endtime="20220712 09:25:58.495"/>
 </kw>
 <kw name="Element Should Contain" library="SeleniumLibrary">
 <arg>//body/div[1]</arg>
 <arg>Your new product is created!</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20220708 09:59:27.929" level="INFO">Element '//body/div[1]' contains text 'Your new product is created!'.</msg>
-<status status="PASS" starttime="20220708 09:59:27.280" endtime="20220708 09:59:27.929"/>
+<msg timestamp="20220712 09:25:59.142" level="INFO">Element '//body/div[1]' contains text 'Your new product is created!'.</msg>
+<status status="PASS" starttime="20220712 09:25:58.495" endtime="20220712 09:25:59.142"/>
 </kw>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>//a[contains(text(),'Create another product')]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220708 09:59:28.577" level="INFO">Element '//a[contains(text(),'Create another product')]' is displayed.</msg>
-<status status="PASS" starttime="20220708 09:59:27.930" endtime="20220708 09:59:28.577"/>
+<msg timestamp="20220712 09:25:59.780" level="INFO">Element '//a[contains(text(),'Create another product')]' is displayed.</msg>
+<status status="PASS" starttime="20220712 09:25:59.142" endtime="20220712 09:25:59.780"/>
 </kw>
-<status status="PASS" starttime="20220708 09:59:22.690" endtime="20220708 09:59:28.578"/>
-</test>
-<test id="s1-t4" name="Create New Product with special character in Product Name">
-<kw name="Go To" library="SeleniumLibrary" type="SETUP">
-<arg>${createProduct}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220708 09:59:28.583" level="INFO">Opening url 'http://mcf-qa-merchant-center.herokuapp.com/products/new'</msg>
-<status status="PASS" starttime="20220708 09:59:28.583" endtime="20220708 09:59:29.200"/>
+<kw name="Location Should Contain" library="SeleniumLibrary">
+<arg>/products</arg>
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<msg timestamp="20220712 09:26:00.088" level="INFO">Current location contains '/products'.</msg>
+<status status="PASS" starttime="20220712 09:25:59.780" endtime="20220712 09:26:00.088"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=name</arg>
-<arg>$%!@&amp;฿ Shirt</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220708 09:59:29.202" level="INFO">Typing text '$%!@&amp;฿ Shirt' into text field 'id=name'.</msg>
-<status status="PASS" starttime="20220708 09:59:29.201" endtime="20220708 09:59:30.181"/>
+<kw name="Reload Page" library="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20220712 09:26:00.088" endtime="20220712 09:26:04.947"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=category</arg>
-<arg>${category}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220708 09:59:30.183" level="INFO">Typing text 'Cloth' into text field 'id=category'.</msg>
-<status status="PASS" starttime="20220708 09:59:30.182" endtime="20220708 09:59:31.185"/>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${countRow}</var>
+<arg>//tbody/tr</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220712 09:26:05.270" level="INFO">${countRow} = 51</msg>
+<status status="PASS" starttime="20220712 09:26:04.947" endtime="20220712 09:26:05.270"/>
 </kw>
-<kw name="Choose File" library="SeleniumLibrary">
-<arg>id=image_blob</arg>
-<arg>${imagePNG32px}</arg>
-<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
-<msg timestamp="20220708 09:59:31.187" level="INFO">Sending D:\20220707-RBF-Test\Image\green_shirt_32_png.png to browser.</msg>
-<status status="PASS" starttime="20220708 09:59:31.186" endtime="20220708 09:59:31.834"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\nCount Row = ${countRow}\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220712 09:26:05.272" endtime="20220712 09:26:05.274"/>
 </kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>name=commit</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220708 09:59:31.835" level="INFO">Clicking button 'name=commit'.</msg>
-<status status="PASS" starttime="20220708 09:59:31.835" endtime="20220708 09:59:33.117"/>
+<kw name="Get Current Date" library="DateTime">
+<var>${currentDate}</var>
+<arg>result_format=%Y-%m-%d</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<msg timestamp="20220712 09:26:05.276" level="INFO">${currentDate} = 2022-07-12</msg>
+<status status="PASS" starttime="20220712 09:26:05.275" endtime="20220712 09:26:05.276"/>
 </kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>//div[contains(text(),'Name is invalid')]</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220708 09:59:33.767" level="INFO">Element '//div[contains(text(),'Name is invalid')]' is displayed.</msg>
-<status status="PASS" starttime="20220708 09:59:33.118" endtime="20220708 09:59:33.767"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\nCurrent Date = ${currentDate}\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220712 09:26:05.277" endtime="20220712 09:26:05.278"/>
 </kw>
-<status status="PASS" starttime="20220708 09:59:28.581" endtime="20220708 09:59:33.768"/>
-</test>
-<test id="s1-t5" name="Create New Product with number in Product Name">
-<kw name="Go To" library="SeleniumLibrary" type="SETUP">
-<arg>${createProduct}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220708 09:59:33.774" level="INFO">Opening url 'http://mcf-qa-merchant-center.herokuapp.com/products/new'</msg>
-<status status="PASS" starttime="20220708 09:59:33.773" endtime="20220708 09:59:34.399"/>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0, document.body.scrollHeight)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220712 09:26:05.280" level="INFO">Executing JavaScript:
+window.scrollTo(0, document.body.scrollHeight)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220712 09:26:05.279" endtime="20220712 09:26:05.598"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=name</arg>
-<arg>072022 Shirt</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220708 09:59:34.401" level="INFO">Typing text '072022 Shirt' into text field 'id=name'.</msg>
-<status status="PASS" starttime="20220708 09:59:34.400" endtime="20220708 09:59:35.406"/>
+<kw name="Table Cell Should Contain" library="SeleniumLibrary">
+<arg>${tableProductList}</arg>
+<arg>${lastRow}</arg>
+<arg>1</arg>
+<arg>No Image</arg>
+<doc>Verifies table cell contains text ``expected``.</doc>
+<msg timestamp="20220712 09:26:07.840" level="INFO">Table cell contains 'No Image'.</msg>
+<status status="PASS" starttime="20220712 09:26:05.598" endtime="20220712 09:26:07.840"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=category</arg>
-<arg>${category}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220708 09:59:35.407" level="INFO">Typing text 'Cloth' into text field 'id=category'.</msg>
-<status status="PASS" starttime="20220708 09:59:35.407" endtime="20220708 09:59:36.386"/>
-</kw>
-<kw name="Choose File" library="SeleniumLibrary">
-<arg>id=image_blob</arg>
-<arg>${imagePNG32px}</arg>
-<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
-<msg timestamp="20220708 09:59:36.388" level="INFO">Sending D:\20220707-RBF-Test\Image\green_shirt_32_png.png to browser.</msg>
-<status status="PASS" starttime="20220708 09:59:36.387" endtime="20220708 09:59:37.038"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>name=commit</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220708 09:59:37.039" level="INFO">Clicking button 'name=commit'.</msg>
-<status status="PASS" starttime="20220708 09:59:37.039" endtime="20220708 09:59:38.374"/>
-</kw>
-<kw name="Element Should Contain" library="SeleniumLibrary">
-<arg>//body/div[1]</arg>
-<arg>Your new product is created!</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20220708 09:59:39.026" level="INFO">Element '//body/div[1]' contains text 'Your new product is created!'.</msg>
-<status status="PASS" starttime="20220708 09:59:38.374" endtime="20220708 09:59:39.026"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>//a[contains(text(),'Create another product')]</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220708 09:59:39.679" level="INFO">Element '//a[contains(text(),'Create another product')]' is displayed.</msg>
-<status status="PASS" starttime="20220708 09:59:39.027" endtime="20220708 09:59:39.679"/>
-</kw>
-<status status="PASS" starttime="20220708 09:59:33.772" endtime="20220708 09:59:39.681"/>
-</test>
-<test id="s1-t6" name="Create New Product with less than 3 character in Product Name">
-<kw name="Go To" library="SeleniumLibrary" type="SETUP">
-<arg>${createProduct}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220708 09:59:39.686" level="INFO">Opening url 'http://mcf-qa-merchant-center.herokuapp.com/products/new'</msg>
-<status status="PASS" starttime="20220708 09:59:39.686" endtime="20220708 09:59:40.375"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=name</arg>
-<arg>TT</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220708 09:59:40.377" level="INFO">Typing text 'TT' into text field 'id=name'.</msg>
-<status status="PASS" starttime="20220708 09:59:40.376" endtime="20220708 09:59:41.385"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=category</arg>
-<arg>${category}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220708 09:59:41.387" level="INFO">Typing text 'Cloth' into text field 'id=category'.</msg>
-<status status="PASS" starttime="20220708 09:59:41.386" endtime="20220708 09:59:42.391"/>
-</kw>
-<kw name="Choose File" library="SeleniumLibrary">
-<arg>id=image_blob</arg>
-<arg>${imagePNG32px}</arg>
-<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
-<msg timestamp="20220708 09:59:42.393" level="INFO">Sending D:\20220707-RBF-Test\Image\green_shirt_32_png.png to browser.</msg>
-<status status="PASS" starttime="20220708 09:59:42.392" endtime="20220708 09:59:43.044"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>name=commit</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220708 09:59:43.046" level="INFO">Clicking button 'name=commit'.</msg>
-<status status="PASS" starttime="20220708 09:59:43.045" endtime="20220708 09:59:44.348"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>//div[contains(text(),'Name is too short (minimum is 3 characters)')]</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220708 09:59:44.996" level="INFO">Element '//div[contains(text(),'Name is too short (minimum is 3 characters)')]' is displayed.</msg>
-<status status="PASS" starttime="20220708 09:59:44.349" endtime="20220708 09:59:44.996"/>
-</kw>
-<status status="PASS" starttime="20220708 09:59:39.684" endtime="20220708 09:59:44.997"/>
-</test>
-<test id="s1-t7" name="Create New Product with more than 12 character in Product Name">
-<kw name="Go To" library="SeleniumLibrary" type="SETUP">
-<arg>${createProduct}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220708 09:59:45.003" level="INFO">Opening url 'http://mcf-qa-merchant-center.herokuapp.com/products/new'</msg>
-<status status="PASS" starttime="20220708 09:59:45.002" endtime="20220708 09:59:45.663"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=name</arg>
-<arg>Green TShirts</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220708 09:59:45.665" level="INFO">Typing text 'Green TShirts' into text field 'id=name'.</msg>
-<status status="PASS" starttime="20220708 09:59:45.664" endtime="20220708 09:59:46.671"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=category</arg>
-<arg>${category}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220708 09:59:46.673" level="INFO">Typing text 'Cloth' into text field 'id=category'.</msg>
-<status status="PASS" starttime="20220708 09:59:46.672" endtime="20220708 09:59:47.677"/>
-</kw>
-<kw name="Choose File" library="SeleniumLibrary">
-<arg>id=image_blob</arg>
-<arg>${imagePNG32px}</arg>
-<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
-<msg timestamp="20220708 09:59:47.679" level="INFO">Sending D:\20220707-RBF-Test\Image\green_shirt_32_png.png to browser.</msg>
-<status status="PASS" starttime="20220708 09:59:47.678" endtime="20220708 09:59:48.341"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>name=commit</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220708 09:59:48.343" level="INFO">Clicking button 'name=commit'.</msg>
-<status status="PASS" starttime="20220708 09:59:48.342" endtime="20220708 09:59:49.646"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>//div[contains(text(),'Name is too long (maximum is 12 characters)')]</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220708 09:59:50.300" level="INFO">Element '//div[contains(text(),'Name is too long (maximum is 12 characters)')]' is displayed.</msg>
-<status status="PASS" starttime="20220708 09:59:49.647" endtime="20220708 09:59:50.300"/>
-</kw>
-<status status="PASS" starttime="20220708 09:59:45.001" endtime="20220708 09:59:50.301"/>
-</test>
-<test id="s1-t8" name="Create New Product without Category">
-<kw name="Go To" library="SeleniumLibrary" type="SETUP">
-<arg>${createProduct}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220708 09:59:50.306" level="INFO">Opening url 'http://mcf-qa-merchant-center.herokuapp.com/products/new'</msg>
-<status status="PASS" starttime="20220708 09:59:50.306" endtime="20220708 09:59:51.075"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=name</arg>
+<kw name="Table Cell Should Contain" library="SeleniumLibrary">
+<arg>${tableProductList}</arg>
+<arg>${lastRow}</arg>
+<arg>${columnName}</arg>
 <arg>${name}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220708 09:59:51.077" level="INFO">Typing text 'Green Shirt' into text field 'id=name'.</msg>
-<status status="PASS" starttime="20220708 09:59:51.076" endtime="20220708 09:59:52.084"/>
+<doc>Verifies table cell contains text ``expected``.</doc>
+<msg timestamp="20220712 09:26:10.107" level="INFO">Table cell contains 'Blue Shirt'.</msg>
+<status status="PASS" starttime="20220712 09:26:07.841" endtime="20220712 09:26:10.107"/>
 </kw>
-<kw name="Choose File" library="SeleniumLibrary">
-<arg>id=image_blob</arg>
-<arg>${imagePNG32px}</arg>
-<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
-<msg timestamp="20220708 09:59:52.086" level="INFO">Sending D:\20220707-RBF-Test\Image\green_shirt_32_png.png to browser.</msg>
-<status status="PASS" starttime="20220708 09:59:52.085" endtime="20220708 09:59:52.748"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>name=commit</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220708 09:59:52.751" level="INFO">Clicking button 'name=commit'.</msg>
-<status status="PASS" starttime="20220708 09:59:52.750" endtime="20220708 09:59:53.727"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>//div[@id='category_error']</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220708 09:59:54.378" level="INFO">Element '//div[@id='category_error']' is displayed.</msg>
-<status status="PASS" starttime="20220708 09:59:53.728" endtime="20220708 09:59:54.378"/>
-</kw>
-<status status="PASS" starttime="20220708 09:59:50.305" endtime="20220708 09:59:54.379"/>
-</test>
-<test id="s1-t9" name="Create New Product with only Category">
-<kw name="Go To" library="SeleniumLibrary" type="SETUP">
-<arg>${createProduct}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220708 09:59:54.386" level="INFO">Opening url 'http://mcf-qa-merchant-center.herokuapp.com/products/new'</msg>
-<status status="PASS" starttime="20220708 09:59:54.385" endtime="20220708 09:59:55.015"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=category</arg>
+<kw name="Table Cell Should Contain" library="SeleniumLibrary">
+<arg>${tableProductList}</arg>
+<arg>${lastRow}</arg>
+<arg>${columnCategory}</arg>
 <arg>${category}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220708 09:59:55.017" level="INFO">Typing text 'Cloth' into text field 'id=category'.</msg>
-<status status="PASS" starttime="20220708 09:59:55.016" endtime="20220708 09:59:56.017"/>
+<doc>Verifies table cell contains text ``expected``.</doc>
+<msg timestamp="20220712 09:26:12.364" level="INFO">Table cell contains 'Cloth'.</msg>
+<status status="PASS" starttime="20220712 09:26:10.108" endtime="20220712 09:26:12.364"/>
 </kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>name=commit</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220708 09:59:56.019" level="INFO">Clicking button 'name=commit'.</msg>
-<status status="PASS" starttime="20220708 09:59:56.018" endtime="20220708 09:59:57.325"/>
+<kw name="Table Cell Should Contain" library="SeleniumLibrary">
+<arg>${tableProductList}</arg>
+<arg>${lastRow}</arg>
+<arg>${columnCreateAt}</arg>
+<arg>${currentDate}</arg>
+<doc>Verifies table cell contains text ``expected``.</doc>
+<msg timestamp="20220712 09:26:14.637" level="INFO">Table cell contains '2022-07-12'.</msg>
+<status status="PASS" starttime="20220712 09:26:12.365" endtime="20220712 09:26:14.637"/>
 </kw>
-<status status="PASS" starttime="20220708 09:59:54.383" endtime="20220708 09:59:57.326"/>
+<kw name="Table Cell Should Contain" library="SeleniumLibrary">
+<arg>${tableProductList}</arg>
+<arg>${lastRow}</arg>
+<arg>${columnCreateBy}</arg>
+<arg>${email}</arg>
+<doc>Verifies table cell contains text ``expected``.</doc>
+<msg timestamp="20220712 09:26:16.873" level="INFO">Table cell contains 'devrec-manao@mycloudfulfillment.com'.</msg>
+<status status="PASS" starttime="20220712 09:26:14.639" endtime="20220712 09:26:16.873"/>
+</kw>
+<status status="PASS" starttime="20220712 09:25:54.554" endtime="20220712 09:26:16.874"/>
 </test>
-<test id="s1-t10" name="Create New Product with space in Category">
-<kw name="Go To" library="SeleniumLibrary" type="SETUP">
-<arg>${createProduct}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220708 09:59:57.332" level="INFO">Opening url 'http://mcf-qa-merchant-center.herokuapp.com/products/new'</msg>
-<status status="PASS" starttime="20220708 09:59:57.331" endtime="20220708 09:59:57.962"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=name</arg>
-<arg>${name}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220708 09:59:57.964" level="INFO">Typing text 'Green Shirt' into text field 'id=name'.</msg>
-<status status="PASS" starttime="20220708 09:59:57.963" endtime="20220708 09:59:58.972"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=category</arg>
-<arg>${SPACE}${category}${SPACE}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220708 09:59:58.974" level="INFO">Typing text ' Cloth ' into text field 'id=category'.</msg>
-<status status="PASS" starttime="20220708 09:59:58.973" endtime="20220708 09:59:59.979"/>
-</kw>
-<kw name="Choose File" library="SeleniumLibrary">
-<arg>id=image_blob</arg>
-<arg>${imagePNG32px}</arg>
-<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
-<msg timestamp="20220708 09:59:59.981" level="INFO">Sending D:\20220707-RBF-Test\Image\green_shirt_32_png.png to browser.</msg>
-<status status="PASS" starttime="20220708 09:59:59.980" endtime="20220708 10:00:00.648"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>name=commit</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220708 10:00:00.650" level="INFO">Clicking button 'name=commit'.</msg>
-<status status="PASS" starttime="20220708 10:00:00.649" endtime="20220708 10:00:01.941"/>
-</kw>
-<kw name="Element Should Contain" library="SeleniumLibrary">
-<arg>//body/div[1]</arg>
-<arg>Your new product is created!</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20220708 10:00:02.589" level="INFO">Element '//body/div[1]' contains text 'Your new product is created!'.</msg>
-<status status="PASS" starttime="20220708 10:00:01.942" endtime="20220708 10:00:02.589"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>//a[contains(text(),'Create another product')]</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220708 10:00:03.222" level="INFO">Element '//a[contains(text(),'Create another product')]' is displayed.</msg>
-<status status="PASS" starttime="20220708 10:00:02.590" endtime="20220708 10:00:03.222"/>
-</kw>
-<status status="PASS" starttime="20220708 09:59:57.330" endtime="20220708 10:00:03.223"/>
-</test>
-<test id="s1-t11" name="Create New Product with special character in Category">
-<kw name="Go To" library="SeleniumLibrary" type="SETUP">
-<arg>${createProduct}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220708 10:00:03.228" level="INFO">Opening url 'http://mcf-qa-merchant-center.herokuapp.com/products/new'</msg>
-<status status="PASS" starttime="20220708 10:00:03.228" endtime="20220708 10:00:03.862"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=name</arg>
-<arg>${name}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220708 10:00:03.864" level="INFO">Typing text 'Green Shirt' into text field 'id=name'.</msg>
-<status status="PASS" starttime="20220708 10:00:03.863" endtime="20220708 10:00:04.872"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=category</arg>
-<arg>$%!@&amp;฿${category}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220708 10:00:04.874" level="INFO">Typing text '$%!@&amp;฿Cloth' into text field 'id=category'.</msg>
-<status status="PASS" starttime="20220708 10:00:04.873" endtime="20220708 10:00:05.882"/>
-</kw>
-<kw name="Choose File" library="SeleniumLibrary">
-<arg>id=image_blob</arg>
-<arg>${imagePNG32px}</arg>
-<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
-<msg timestamp="20220708 10:00:05.884" level="INFO">Sending D:\20220707-RBF-Test\Image\green_shirt_32_png.png to browser.</msg>
-<status status="PASS" starttime="20220708 10:00:05.883" endtime="20220708 10:00:06.533"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>name=commit</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220708 10:00:06.535" level="INFO">Clicking button 'name=commit'.</msg>
-<status status="PASS" starttime="20220708 10:00:06.534" endtime="20220708 10:00:07.863"/>
-</kw>
-<kw name="Element Should Contain" library="SeleniumLibrary">
-<arg>//body/div[1]</arg>
-<arg>Your new product is created!</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20220708 10:00:08.514" level="INFO">Element '//body/div[1]' contains text 'Your new product is created!'.</msg>
-<status status="PASS" starttime="20220708 10:00:07.864" endtime="20220708 10:00:08.514"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>//a[contains(text(),'Create another product')]</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220708 10:00:09.151" level="INFO">Element '//a[contains(text(),'Create another product')]' is displayed.</msg>
-<status status="PASS" starttime="20220708 10:00:08.515" endtime="20220708 10:00:09.151"/>
-</kw>
-<status status="PASS" starttime="20220708 10:00:03.226" endtime="20220708 10:00:09.152"/>
-</test>
-<test id="s1-t12" name="Create New Product with number in Category">
-<kw name="Go To" library="SeleniumLibrary" type="SETUP">
-<arg>${createProduct}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220708 10:00:09.155" level="INFO">Opening url 'http://mcf-qa-merchant-center.herokuapp.com/products/new'</msg>
-<status status="PASS" starttime="20220708 10:00:09.155" endtime="20220708 10:00:09.802"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=name</arg>
-<arg>${name}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220708 10:00:09.804" level="INFO">Typing text 'Green Shirt' into text field 'id=name'.</msg>
-<status status="PASS" starttime="20220708 10:00:09.803" endtime="20220708 10:00:10.809"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=category</arg>
-<arg>20220707${category}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220708 10:00:10.811" level="INFO">Typing text '20220707Cloth' into text field 'id=category'.</msg>
-<status status="PASS" starttime="20220708 10:00:10.810" endtime="20220708 10:00:11.818"/>
-</kw>
-<kw name="Choose File" library="SeleniumLibrary">
-<arg>id=image_blob</arg>
-<arg>${imagePNG32px}</arg>
-<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
-<msg timestamp="20220708 10:00:11.819" level="INFO">Sending D:\20220707-RBF-Test\Image\green_shirt_32_png.png to browser.</msg>
-<status status="PASS" starttime="20220708 10:00:11.818" endtime="20220708 10:00:12.471"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>name=commit</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220708 10:00:12.473" level="INFO">Clicking button 'name=commit'.</msg>
-<status status="PASS" starttime="20220708 10:00:12.472" endtime="20220708 10:00:13.789"/>
-</kw>
-<kw name="Element Should Contain" library="SeleniumLibrary">
-<arg>//body/div[1]</arg>
-<arg>Your new product is created!</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20220708 10:00:14.438" level="INFO">Element '//body/div[1]' contains text 'Your new product is created!'.</msg>
-<status status="PASS" starttime="20220708 10:00:13.790" endtime="20220708 10:00:14.438"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>//a[contains(text(),'Create another product')]</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220708 10:00:15.088" level="INFO">Element '//a[contains(text(),'Create another product')]' is displayed.</msg>
-<status status="PASS" starttime="20220708 10:00:14.439" endtime="20220708 10:00:15.088"/>
-</kw>
-<status status="PASS" starttime="20220708 10:00:09.154" endtime="20220708 10:00:15.089"/>
-</test>
-<test id="s1-t13" name="Create New Product with 50 character in Category">
-<kw name="Go To" library="SeleniumLibrary" type="SETUP">
-<arg>${createProduct}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220708 10:00:15.095" level="INFO">Opening url 'http://mcf-qa-merchant-center.herokuapp.com/products/new'</msg>
-<status status="PASS" starttime="20220708 10:00:15.094" endtime="20220708 10:00:15.751"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=name</arg>
-<arg>${name}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220708 10:00:15.753" level="INFO">Typing text 'Green Shirt' into text field 'id=name'.</msg>
-<status status="PASS" starttime="20220708 10:00:15.752" endtime="20220708 10:00:16.759"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=category</arg>
-<arg>${50character}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220708 10:00:16.761" level="INFO">Typing text 'The European languages are members of the same fam' into text field 'id=category'.</msg>
-<status status="PASS" starttime="20220708 10:00:16.760" endtime="20220708 10:00:17.779"/>
-</kw>
-<kw name="Choose File" library="SeleniumLibrary">
-<arg>id=image_blob</arg>
-<arg>${imagePNG32px}</arg>
-<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
-<msg timestamp="20220708 10:00:17.781" level="INFO">Sending D:\20220707-RBF-Test\Image\green_shirt_32_png.png to browser.</msg>
-<status status="PASS" starttime="20220708 10:00:17.780" endtime="20220708 10:00:18.435"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>name=commit</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220708 10:00:18.437" level="INFO">Clicking button 'name=commit'.</msg>
-<status status="PASS" starttime="20220708 10:00:18.436" endtime="20220708 10:00:19.765"/>
-</kw>
-<kw name="Element Should Contain" library="SeleniumLibrary">
-<arg>//body/div[1]</arg>
-<arg>Your new product is created!</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20220708 10:00:20.416" level="INFO">Element '//body/div[1]' contains text 'Your new product is created!'.</msg>
-<status status="PASS" starttime="20220708 10:00:19.766" endtime="20220708 10:00:20.416"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>//a[contains(text(),'Create another product')]</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220708 10:00:21.068" level="INFO">Element '//a[contains(text(),'Create another product')]' is displayed.</msg>
-<status status="PASS" starttime="20220708 10:00:20.417" endtime="20220708 10:00:21.068"/>
-</kw>
-<status status="PASS" starttime="20220708 10:00:15.093" endtime="20220708 10:00:21.070"/>
-</test>
-<test id="s1-t14" name="Create New Product with more than 1 Category and separate by comma">
-<kw name="Go To" library="SeleniumLibrary" type="SETUP">
-<arg>${createProduct}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220708 10:00:21.075" level="INFO">Opening url 'http://mcf-qa-merchant-center.herokuapp.com/products/new'</msg>
-<status status="PASS" starttime="20220708 10:00:21.075" endtime="20220708 10:00:21.703"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=name</arg>
-<arg>${name}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220708 10:00:21.705" level="INFO">Typing text 'Green Shirt' into text field 'id=name'.</msg>
-<status status="PASS" starttime="20220708 10:00:21.704" endtime="20220708 10:00:22.695"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=category</arg>
-<arg>${category},Casual Wear</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220708 10:00:22.697" level="INFO">Typing text 'Cloth,Casual Wear' into text field 'id=category'.</msg>
-<status status="PASS" starttime="20220708 10:00:22.696" endtime="20220708 10:00:23.702"/>
-</kw>
-<kw name="Choose File" library="SeleniumLibrary">
-<arg>id=image_blob</arg>
-<arg>${imagePNG32px}</arg>
-<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
-<msg timestamp="20220708 10:00:23.704" level="INFO">Sending D:\20220707-RBF-Test\Image\green_shirt_32_png.png to browser.</msg>
-<status status="PASS" starttime="20220708 10:00:23.703" endtime="20220708 10:00:24.370"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>name=commit</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220708 10:00:24.372" level="INFO">Clicking button 'name=commit'.</msg>
-<status status="PASS" starttime="20220708 10:00:24.371" endtime="20220708 10:00:25.721"/>
-</kw>
-<kw name="Element Should Contain" library="SeleniumLibrary">
-<arg>//body/div[1]</arg>
-<arg>Your new product is created!</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20220708 10:00:26.375" level="INFO">Element '//body/div[1]' contains text 'Your new product is created!'.</msg>
-<status status="PASS" starttime="20220708 10:00:25.722" endtime="20220708 10:00:26.375"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>//a[contains(text(),'Create another product')]</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220708 10:00:27.022" level="INFO">Element '//a[contains(text(),'Create another product')]' is displayed.</msg>
-<status status="PASS" starttime="20220708 10:00:26.376" endtime="20220708 10:00:27.022"/>
-</kw>
-<status status="PASS" starttime="20220708 10:00:21.074" endtime="20220708 10:00:27.022"/>
-</test>
-<test id="s1-t15" name="Create New Product without Product Image">
-<kw name="Go To" library="SeleniumLibrary" type="SETUP">
-<arg>${createProduct}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220708 10:00:27.028" level="INFO">Opening url 'http://mcf-qa-merchant-center.herokuapp.com/products/new'</msg>
-<status status="PASS" starttime="20220708 10:00:27.027" endtime="20220708 10:00:27.661"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=name</arg>
-<arg>${name}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220708 10:00:27.677" level="INFO">Typing text 'Green Shirt' into text field 'id=name'.</msg>
-<status status="PASS" starttime="20220708 10:00:27.662" endtime="20220708 10:00:28.669"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=category</arg>
-<arg>${category}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220708 10:00:28.671" level="INFO">Typing text 'Cloth' into text field 'id=category'.</msg>
-<status status="PASS" starttime="20220708 10:00:28.670" endtime="20220708 10:00:29.677"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>name=commit</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220708 10:00:29.679" level="INFO">Clicking button 'name=commit'.</msg>
-<status status="PASS" starttime="20220708 10:00:29.679" endtime="20220708 10:00:31.013"/>
-</kw>
-<kw name="Element Should Contain" library="SeleniumLibrary">
-<arg>//body/div[1]</arg>
-<arg>Your new product is created!</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20220708 10:00:31.667" level="INFO">Element '//body/div[1]' contains text 'Your new product is created!'.</msg>
-<status status="PASS" starttime="20220708 10:00:31.013" endtime="20220708 10:00:31.667"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>//a[contains(text(),'Create another product')]</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220708 10:00:32.317" level="INFO">Element '//a[contains(text(),'Create another product')]' is displayed.</msg>
-<status status="PASS" starttime="20220708 10:00:31.667" endtime="20220708 10:00:32.317"/>
-</kw>
-<status status="PASS" starttime="20220708 10:00:27.025" endtime="20220708 10:00:32.317"/>
-</test>
-<test id="s1-t16" name="Create New Product with only Product Image">
-<kw name="Go To" library="SeleniumLibrary" type="SETUP">
-<arg>${createProduct}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220708 10:00:32.322" level="INFO">Opening url 'http://mcf-qa-merchant-center.herokuapp.com/products/new'</msg>
-<status status="PASS" starttime="20220708 10:00:32.322" endtime="20220708 10:00:32.969"/>
-</kw>
-<kw name="Choose File" library="SeleniumLibrary">
-<arg>id=image_blob</arg>
-<arg>${imagePNG32px}</arg>
-<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
-<msg timestamp="20220708 10:00:32.971" level="INFO">Sending D:\20220707-RBF-Test\Image\green_shirt_32_png.png to browser.</msg>
-<status status="PASS" starttime="20220708 10:00:32.970" endtime="20220708 10:00:33.637"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>name=commit</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220708 10:00:33.639" level="INFO">Clicking button 'name=commit'.</msg>
-<status status="PASS" starttime="20220708 10:00:33.638" endtime="20220708 10:00:34.616"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>//div[@id='category_error']</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220708 10:00:35.265" level="INFO">Element '//div[@id='category_error']' is displayed.</msg>
-<status status="PASS" starttime="20220708 10:00:34.617" endtime="20220708 10:00:35.265"/>
-</kw>
-<status status="PASS" starttime="20220708 10:00:32.321" endtime="20220708 10:00:35.266"/>
-</test>
-<test id="s1-t17" name="Create New Product with invalid Product Image format">
-<kw name="Go To" library="SeleniumLibrary" type="SETUP">
-<arg>${createProduct}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220708 10:00:35.272" level="INFO">Opening url 'http://mcf-qa-merchant-center.herokuapp.com/products/new'</msg>
-<status status="PASS" starttime="20220708 10:00:35.271" endtime="20220708 10:00:35.933"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=name</arg>
-<arg>${name}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220708 10:00:35.935" level="INFO">Typing text 'Green Shirt' into text field 'id=name'.</msg>
-<status status="PASS" starttime="20220708 10:00:35.934" endtime="20220708 10:00:36.940"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=category</arg>
-<arg>${category}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220708 10:00:36.942" level="INFO">Typing text 'Cloth' into text field 'id=category'.</msg>
-<status status="PASS" starttime="20220708 10:00:36.941" endtime="20220708 10:00:37.944"/>
-</kw>
-<kw name="Choose File" library="SeleniumLibrary">
-<arg>id=image_blob</arg>
-<arg>${imageJPG32px}</arg>
-<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
-<msg timestamp="20220708 10:00:37.946" level="INFO">Sending D:\20220707-RBF-Test\Image\green_shirt_32_jpg.jpg to browser.</msg>
-<status status="PASS" starttime="20220708 10:00:37.945" endtime="20220708 10:00:38.610"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>name=commit</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220708 10:00:38.612" level="INFO">Clicking button 'name=commit'.</msg>
-<status status="PASS" starttime="20220708 10:00:38.611" endtime="20220708 10:00:39.590"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>//div[@id='extension_error']</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220708 10:00:40.241" level="INFO">Element '//div[@id='extension_error']' is displayed.</msg>
-<status status="PASS" starttime="20220708 10:00:39.591" endtime="20220708 10:00:40.241"/>
-</kw>
-<status status="PASS" starttime="20220708 10:00:35.270" endtime="20220708 10:00:40.242"/>
-</test>
-<test id="s1-t18" name="Create New Product with invalid Product Image size">
-<kw name="Go To" library="SeleniumLibrary" type="SETUP">
-<arg>${createProduct}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220708 10:00:40.248" level="INFO">Opening url 'http://mcf-qa-merchant-center.herokuapp.com/products/new'</msg>
-<status status="PASS" starttime="20220708 10:00:40.247" endtime="20220708 10:00:40.862"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=name</arg>
-<arg>${name}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220708 10:00:40.864" level="INFO">Typing text 'Green Shirt' into text field 'id=name'.</msg>
-<status status="PASS" starttime="20220708 10:00:40.863" endtime="20220708 10:00:41.869"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=category</arg>
-<arg>${category}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220708 10:00:41.871" level="INFO">Typing text 'Cloth' into text field 'id=category'.</msg>
-<status status="PASS" starttime="20220708 10:00:41.871" endtime="20220708 10:00:42.874"/>
-</kw>
-<kw name="Choose File" library="SeleniumLibrary">
-<arg>id=image_blob</arg>
-<arg>${imagePNG33px}</arg>
-<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
-<msg timestamp="20220708 10:00:42.876" level="INFO">Sending D:\20220707-RBF-Test\Image\orange_shirt_33_png.png to browser.</msg>
-<status status="PASS" starttime="20220708 10:00:42.875" endtime="20220708 10:00:43.539"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>name=commit</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220708 10:00:43.541" level="INFO">Clicking button 'name=commit'.</msg>
-<status status="PASS" starttime="20220708 10:00:43.540" endtime="20220708 10:00:44.516"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>//div[@id='image_error']</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220708 10:00:45.165" level="INFO">Element '//div[@id='image_error']' is displayed.</msg>
-<status status="PASS" starttime="20220708 10:00:44.517" endtime="20220708 10:00:45.165"/>
-</kw>
-<status status="PASS" starttime="20220708 10:00:40.246" endtime="20220708 10:00:45.166"/>
-</test>
-<test id="s1-t19" name="Create New Product with invalid Product Image format and size">
-<kw name="Go To" library="SeleniumLibrary" type="SETUP">
-<arg>${createProduct}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220708 10:00:45.172" level="INFO">Opening url 'http://mcf-qa-merchant-center.herokuapp.com/products/new'</msg>
-<status status="PASS" starttime="20220708 10:00:45.171" endtime="20220708 10:00:45.845"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=name</arg>
-<arg>${name}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220708 10:00:45.847" level="INFO">Typing text 'Green Shirt' into text field 'id=name'.</msg>
-<status status="PASS" starttime="20220708 10:00:45.846" endtime="20220708 10:00:46.853"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=category</arg>
-<arg>${category}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220708 10:00:46.855" level="INFO">Typing text 'Cloth' into text field 'id=category'.</msg>
-<status status="PASS" starttime="20220708 10:00:46.854" endtime="20220708 10:00:47.862"/>
-</kw>
-<kw name="Choose File" library="SeleniumLibrary">
-<arg>id=image_blob</arg>
-<arg>${imageJPG33px}</arg>
-<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
-<msg timestamp="20220708 10:00:47.864" level="INFO">Sending D:\20220707-RBF-Test\Image\orange_shirt_33_jpg.jpg to browser.</msg>
-<status status="PASS" starttime="20220708 10:00:47.863" endtime="20220708 10:00:48.528"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>name=commit</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220708 10:00:48.530" level="INFO">Clicking button 'name=commit'.</msg>
-<status status="PASS" starttime="20220708 10:00:48.529" endtime="20220708 10:00:49.505"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>//div[@id='image_error']</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220708 10:00:50.158" level="INFO">Element '//div[@id='image_error']' is displayed.</msg>
-<status status="PASS" starttime="20220708 10:00:49.506" endtime="20220708 10:00:50.158"/>
-</kw>
-<status status="PASS" starttime="20220708 10:00:45.169" endtime="20220708 10:00:50.159"/>
-</test>
-<test id="s1-t20" name="Create New Product by double click Confirm button">
-<kw name="Go To" library="SeleniumLibrary" type="SETUP">
-<arg>${createProduct}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220708 10:00:50.164" level="INFO">Opening url 'http://mcf-qa-merchant-center.herokuapp.com/products/new'</msg>
-<status status="PASS" starttime="20220708 10:00:50.164" endtime="20220708 10:00:50.791"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=name</arg>
-<arg>Double Shirt</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220708 10:00:50.793" level="INFO">Typing text 'Double Shirt' into text field 'id=name'.</msg>
-<status status="PASS" starttime="20220708 10:00:50.792" endtime="20220708 10:00:51.798"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=category</arg>
-<arg>${category}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220708 10:00:51.800" level="INFO">Typing text 'Cloth' into text field 'id=category'.</msg>
-<status status="PASS" starttime="20220708 10:00:51.799" endtime="20220708 10:00:52.804"/>
-</kw>
-<kw name="Choose File" library="SeleniumLibrary">
-<arg>id=image_blob</arg>
-<arg>${imagePNG32px}</arg>
-<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
-<msg timestamp="20220708 10:00:52.806" level="INFO">Sending D:\20220707-RBF-Test\Image\green_shirt_32_png.png to browser.</msg>
-<status status="PASS" starttime="20220708 10:00:52.805" endtime="20220708 10:00:53.468"/>
-</kw>
-<kw name="Double Click Element" library="SeleniumLibrary">
-<arg>name=commit</arg>
-<doc>Double clicks the element identified by ``locator``.</doc>
-<msg timestamp="20220708 10:00:53.470" level="INFO">Double clicking element 'name=commit'.</msg>
-<status status="PASS" starttime="20220708 10:00:53.469" endtime="20220708 10:01:09.237"/>
-</kw>
-<kw name="Element Should Contain" library="SeleniumLibrary">
-<arg>//body/div[1]</arg>
-<arg>Your new product is created!</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20220708 10:01:09.894" level="INFO">Element '//body/div[1]' contains text 'Your new product is created!'.</msg>
-<status status="PASS" starttime="20220708 10:01:09.238" endtime="20220708 10:01:09.894"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>//a[contains(text(),'Create another product')]</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220708 10:01:10.544" level="INFO">Element '//a[contains(text(),'Create another product')]' is displayed.</msg>
-<status status="PASS" starttime="20220708 10:01:09.895" endtime="20220708 10:01:10.544"/>
-</kw>
-<status status="PASS" starttime="20220708 10:00:50.163" endtime="20220708 10:01:10.546"/>
-</test>
-<test id="s1-t21" name="Create New Product Successfully">
-<kw name="Go To" library="SeleniumLibrary" type="SETUP">
-<arg>${createProduct}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220708 10:01:10.551" level="INFO">Opening url 'http://mcf-qa-merchant-center.herokuapp.com/products/new'</msg>
-<status status="PASS" starttime="20220708 10:01:10.550" endtime="20220708 10:01:11.181"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=name</arg>
-<arg>${name}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220708 10:01:11.183" level="INFO">Typing text 'Green Shirt' into text field 'id=name'.</msg>
-<status status="PASS" starttime="20220708 10:01:11.182" endtime="20220708 10:01:12.186"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=category</arg>
-<arg>${category}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220708 10:01:12.189" level="INFO">Typing text 'Cloth' into text field 'id=category'.</msg>
-<status status="PASS" starttime="20220708 10:01:12.188" endtime="20220708 10:01:13.193"/>
-</kw>
-<kw name="Choose File" library="SeleniumLibrary">
-<arg>id=image_blob</arg>
-<arg>${imagePNG32px}</arg>
-<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
-<msg timestamp="20220708 10:01:13.195" level="INFO">Sending D:\20220707-RBF-Test\Image\green_shirt_32_png.png to browser.</msg>
-<status status="PASS" starttime="20220708 10:01:13.194" endtime="20220708 10:01:13.860"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>name=commit</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220708 10:01:13.861" level="INFO">Clicking button 'name=commit'.</msg>
-<status status="PASS" starttime="20220708 10:01:13.861" endtime="20220708 10:01:15.180"/>
-</kw>
-<kw name="Element Should Contain" library="SeleniumLibrary">
-<arg>//body/div[1]</arg>
-<arg>Your new product is created!</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20220708 10:01:15.830" level="INFO">Element '//body/div[1]' contains text 'Your new product is created!'.</msg>
-<status status="PASS" starttime="20220708 10:01:15.181" endtime="20220708 10:01:15.830"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>//a[contains(text(),'Create another product')]</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220708 10:01:16.479" level="INFO">Element '//a[contains(text(),'Create another product')]' is displayed.</msg>
-<status status="PASS" starttime="20220708 10:01:15.831" endtime="20220708 10:01:16.479"/>
-</kw>
-<status status="PASS" starttime="20220708 10:01:10.549" endtime="20220708 10:01:16.480"/>
-</test>
-<status status="PASS" starttime="20220708 09:59:02.943" endtime="20220708 10:01:16.484"/>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220712 09:26:16.879" endtime="20220712 09:26:19.253"/>
+</kw>
+<status status="PASS" starttime="20220712 09:25:43.683" endtime="20220712 09:26:19.253"/>
 </suite>
 <statistics>
 <total>
-<stat pass="21" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="21" fail="0" skip="0" id="s1" name="Create-Product">Create-Product</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Create-Product">Create-Product</stat>
 </suite>
 </statistics>
 <errors>
